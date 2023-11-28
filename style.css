@@ -1,0 +1,142 @@
+body {
+	background-color: bisque;
+	font-family: 'Inter';
+	color: #263238;
+	font-size: 16px;
+	font-weight: 400;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+input,
+textarea,
+button {
+	all: unset;
+}
+
+.feedback {
+	margin: 20px auto;
+	width: 485px;
+	background-color: #fff;
+	padding: 45px 57px;
+}
+
+.feedback__title {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 29.05px;
+	text-align: center;
+	margin: 0 0 29px;
+}
+.feedback__form {
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+}
+
+.feedback__requiredBlock {
+	display: flex;
+	justify-content: space-between;
+}
+.feedback__formGroup {
+	position: relative;
+	width: max-content;
+}
+
+.feedback__label {
+	font-size: 12px;
+	font-weight: 500;
+	position: absolute;
+	top: -8px;
+	left: 5px;
+	background-color: #fff;
+	padding: 0 3px;
+	z-index: 1;
+}
+.feedback__error {
+	position: absolute;
+	top: 55px;
+	right: 5px;
+	color: red;
+	font-size: 10px;
+}
+.feedback__textareaError {
+	position: absolute;
+	bottom: -10px;
+	right: 5px;
+	color: red;
+	font-size: 10px;
+}
+
+.feedback__input,
+.feedback__textarea {
+	outline: 1px solid rgb(37, 49, 55, 16%);
+	border-radius: 4px;
+	padding: 10px 12px;
+}
+
+.feedback__input {
+	width: 206px;
+	height: 34px;
+}
+
+.feedback__input_invalid {
+	outline: 2px solid red;
+}
+
+.feedback__input:focus,
+.feedback__textarea:focus {
+	outline: 2px solid #1bb55c;
+}
+
+.feedback__input:focus + label,
+.feedback__textarea:focus + label {
+	color: #1bb55c;
+}
+
+.feedback__textarea {
+	width: 458px;
+	height: 120px;
+}
+
+.feedback__agreement {
+	font-size: 12px;
+	text-align: center;
+}
+.feedback__agreement_underline {
+	border-bottom: 1px solid #263238;
+}
+
+.feedback__button {
+	width: 205px;
+	margin: 0 auto;
+	padding: 13.5px 0;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #1bb55c;
+	text-align: center;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.feedback__button:hover {
+	background-color: rgb(28, 181, 92, 80%);
+}
+.feedback__button:active {
+	transform: scale(0.95);
+}
+
+.feedback__statusMessage {
+	text-align: center;
+	color: #1bb55c;
+	margin-top: 20px;
+}
+
+.feedback__statusMessage_error {
+	color: red;
+}

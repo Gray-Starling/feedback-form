@@ -1,0 +1,11 @@
+export const form = document.getElementById('feedback-form')
+export const name = document.getElementById('name')
+export const phone = document.getElementById('phone')
+export const email = document.getElementById('email')
+export const message = document.getElementById('message')
+export const statusMsg = document.getElementById('status-message')
+
+export const nameError = document.getElementById('name-error')
+export const phoneError = document.getElementById('phone-error')
+export const emailError = document.getElementById('email-error')
+export const messageError = document.getElementById('message-error')

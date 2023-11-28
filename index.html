@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="feedback">
+    <h2 class="feedback__title">Обратная форма</h2>
+    <form class="feedback__form" id="feedback-form">
+
+      <div class="feedback__requiredBlock">
+        <div class="feedback__formGroup">
+          <input class="feedback__input" type="text" id="name" name="name">
+          <label class="feedback__label" for="name">ФИО</label>
+          <span class="feedback__error" id="name-error"></span>
+        </div>
+        <div class="feedback__formGroup">
+          <input class="feedback__input" type="tel" id="phone" name="phone">
+          <label class="feedback__label" for="phone">Телефон</label>
+          <span class="feedback__error" id="phone-error"></span>
+        </div>
+
+      </div>
+
+      <div class="feedback__formGroup">
+        <input class="feedback__input" type="email" id="email" name="email">
+        <label class="feedback__label" for="email">E-mail</label>
+        <span class="feedback__error" id="email-error"></span>
+      </div>
+
+      <div class="feedback__formGroup">
+        <textarea class="feedback__textarea" id="message" name="message"></textarea>
+        <label class="feedback__label" for="message">Сообщение</label>
+        <span class="feedback__textareaError" id="message-error"></span>
+      </div>
+      <span class="feedback__agreement">Отправляя форму, Вы соглашаетесь на <a href="#"
+          class="feedback__agreement_underline">обработку персональных данных</a></span>
+
+      <button class="feedback__button" id="button" type="submit">Отправить</button>
+    </form>
+    <div class="feedback__statusMessage" id="status-message"></div>
+  </div>
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>
