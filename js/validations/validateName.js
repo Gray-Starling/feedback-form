@@ -1,4 +1,4 @@
-import { regexFio } from '../regex.js'
+import { regexpFio } from '../regexp.js'
 import { nameError } from '../elements.js'
 
 export const validateName = value => {
@@ -6,7 +6,7 @@ export const validateName = value => {
 		nameError.innerText = 'Поле обязательно для заполнения'
 		return false
 	}
-	if (!regexFio.test(value.trim())) {
+	if (!regexpFio.test(value.trim())) {
 		nameError.innerText = 'Не допустимый формат'
 		return false
 	}

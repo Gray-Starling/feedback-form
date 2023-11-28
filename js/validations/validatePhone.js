@@ -3,13 +3,13 @@ import { phoneError } from '../elements.js'
 export const validatePhone = value => {
 	let digitsOnly = value.replace(/\D/g, '')
 
-	if (/[a-zA-Zа-яА-Я]/.test(value)) {
-		phoneError.innerText = 'Номер телефона содержит недопустимые символы'
+	if (value.length === 0) {
+		phoneError.innerText = 'Поле обязательно для заполнения'
 		return false
 	}
 
-	if (value.length === 0) {
-		phoneError.innerText = 'Поле обязательно для заполнения'
+	if (/[a-zA-Zа-яА-Я]/.test(value)) {
+		phoneError.innerText = 'Номер телефона содержит недопустимые символы'
 		return false
 	}
 
