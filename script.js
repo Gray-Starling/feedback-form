@@ -6,40 +6,45 @@ import { fakeAjax } from './js/fakeAjax.js'
 import { fakeFetch } from './js/fakeFetch.js'
 import { form, name, phone, email, message, statusMsg } from './js/elements.js'
 
-name.addEventListener('blur', ev => {
-	validateName(ev.target.value)
-})
+!!name &&
+	name.addEventListener('blur', ev => {
+		validateName(ev.target.value)
+	})
 
-phone.addEventListener('blur', ev => {
-	if (!!validatePhone(ev.target.value)) {
-		ev.target.value = validatePhone(ev.target.value)
-	}
-})
+!!phone &&
+	phone.addEventListener('blur', ev => {
+		if (!!validatePhone(ev.target.value)) {
+			ev.target.value = validatePhone(ev.target.value)
+		}
+	})
 
-email.addEventListener('blur', ev => {
-	validateEmail(ev.target.value)
-})
+!!email &&
+	email.addEventListener('blur', ev => {
+		validateEmail(ev.target.value)
+	})
 
-message.addEventListener('blur', ev => {
-	validateMessage(ev.target.value)
-})
+!!message &&
+	message.addEventListener('blur', ev => {
+		validateMessage(ev.target.value)
+	})
 
-form.addEventListener('submit', ev => {
-	ev.preventDefault()
-	statusMsg.textContent = ''
-	statusMsg.classList.remove('feedback__statusMessage_error')
-	let isName = validateName(name.value)
-	let isPhone = validatePhone(phone.value)
+!!form &&
+	form.addEventListener('submit', ev => {
+		ev.preventDefault()
+		statusMsg.textContent = ''
+		statusMsg.classList.remove('feedback__statusMessage_error')
+		let isName = validateName(name.value)
+		let isPhone = validatePhone(phone.value)
 
-	if (!isName || !isPhone) {
-		return
-	}
+		if (!isName || !isPhone) {
+			return
+		}
 
-	// fakeAjax(form)
-	fakeFetch(form)
+		// fakeAjax(form)
+		fakeFetch(form)
 
-	name.value = ''
-	phone.value = ''
-	email.value = ''
-	message.value = ''
-})
+		name.value = ''
+		phone.value = ''
+		email.value = ''
+		message.value = ''
+	})
